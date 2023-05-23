@@ -7,7 +7,7 @@ import Auth from './pages/auth.jsx';
 import CreateRecipe from "./pages/create-recipe.jsx";
 
 
-import SR from './pages/savedRecipe.jsx';
+import SavedRecipes from './pages/saved-recipes.jsx';
 import Navbar from './components/navbar.jsx';
 
 
@@ -20,7 +20,7 @@ function App() {
           <Route path="/" element={<Home/>}/>
           <Route path="/auth" element={<Auth/>}/>
           <Route path="/create-recipe" element={<CreateRecipe />} />
-          <Route path="/savedRecipe" element={<SR/>}/>
+          <Route path="/saved-recipes" element={<SavedRecipes/>}/>
         </Routes>
       </Router>
       

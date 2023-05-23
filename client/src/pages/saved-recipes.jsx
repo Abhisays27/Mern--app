@@ -1,6 +1,6 @@
 import React from 'react'
 
-const savedRecipe = () => {
+const SavedRecipe = () => {
   return (
     <div className='savedRecipe'>
       SR
@@ -8,4 +8,4 @@ const savedRecipe = () => {
   )
 }
 
-export default savedRecipe
+export default SavedRecipe
