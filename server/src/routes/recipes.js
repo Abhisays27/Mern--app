@@ -1,6 +1,6 @@
 import { RecipeModel } from "../models/Recipes.js";
 import express from "express";
-import mongoose from "mongoose";
+import { verifyToken } from "./users.js";
 import { UserModel } from "../models/Users.js";
 
 const router = express.Router();
@@ -18,7 +18,7 @@ router.get("/",async (req,res) => {
 })
 
 //Allow to post recipe
-router.post("/",async (req,res) => {
+router.post("/",verifyToken,async (req,res) => {
     const recipe = new RecipeModel(req.body);
     try{
         const response = await recipe.save({});
